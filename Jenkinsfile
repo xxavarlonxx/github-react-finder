@@ -31,7 +31,7 @@ pipeline{
         stage('Publish on remote server'){
             steps{
                 script{
-                    sh 'ssh andre@136.243.169.235 "cd ~/docker/github-finder && docker-compose pull app && docker-compose up -d"'
+                    sh 'ssh andre@136.243.169.235 "cd ~/docker/github-finder && docker-compose pull && docker-compose up -d"'
                 }
             }
             
