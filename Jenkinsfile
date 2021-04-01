@@ -3,7 +3,6 @@ pipeline{
         registry = "hub.ahochschulte.de/github-finder"
         registryCredential = "privatehub"
         dockerImage = ''
-        //dockerFile = 'server/prod.dockerfile'
     }
 
     agent any
