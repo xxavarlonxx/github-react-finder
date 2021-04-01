@@ -1,6 +1,6 @@
 pipeline{
     environment {
-        registry = "hub.ahochschulte.de/github-react-finder"
+        registry = "hub.ahochschulte.de/github-finder"
         registryCredential = "privatehub"
         dockerImage = ''
         //dockerFile = 'server/prod.dockerfile'
@@ -31,7 +31,7 @@ pipeline{
         stage('Publish on remote server'){
             steps{
                 script{
-                    sh 'ssh dev@81.169.193.248 "cd ~/react/github-react-finder && docker-compose pull app && docker-compose up -d"'
+                    sh 'ssh andre@136.243.169.235 "cd ~/docker/github-finder && docker-compose pull app && docker-compose up -d"'
                 }
             }
             
